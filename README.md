@@ -1,73 +1,104 @@
-# Siddharth Kumar — Full Stack Developer Portfolio
+# Siddharth Kumar - Full Stack Developer Portfolio
 
 > MCA Student | 10+ Projects Built | Full Stack & Software Development
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Siddharth+Kumar+Portfolio)
+[![Live Website](https://img.shields.io/badge/Live-Portfolio-0ea5e9?style=for-the-badge)](https://siddharthkrofficial.github.io/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-111827?style=for-the-badge)](https://github.com/siddharthkrofficial/siddharthkrofficial.github.io)
 
-## 📌 Basic Information
+## About This Portfolio
 
-This is a modern, interactive portfolio website showcasing my work as a Full Stack Developer and MCA student. The portfolio highlights my skills, projects, and professional background in an engaging, animated interface.
+This is my personal portfolio website built to showcase my projects, technical skills, and professional profile. The site is designed with modern animations, responsive layouts, and smooth interactions.
 
-### 👨‍💻 About Me
+## Basic Information
 
-- **Name:** Siddharth Kumar
-- **Current Status:** MCA (Master of Computer Applications) Student
-- **Location:** Punjab, India
-- **Focus Areas:** Full Stack Web Development, Android Development, Software Engineering
-- **Projects Completed:** 10+ (all built during MCA program)
-- **Availability:** Open to opportunities and collaborations
+- Name: Siddharth Kumar
+- Current Status: MCA (Master of Computer Applications) Student
+- Location: Punjab, India
+- Focus Areas: Full Stack Web Development, Android Development, Software Engineering
+- Projects Completed: 10+
+- Availability: Open to opportunities and collaborations
 
-### 🛠️ Tech Stack
+## Tech Stack
 
-**Frontend:**
-- HTML5, CSS3, JavaScript (ES2024)
-- React.js, Next.js
-- Tailwind CSS
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (ES6+)
 
-**Backend:**
-- Node.js, Express.js
-- MongoDB, MySQL
-- REST APIs
+### Backend and Database
+- Node.js
+- Express.js
+- MongoDB
+- MySQL
 
-**Software Development:**
-- C++, Java, Kotlin
-- Python (Data Science)
-- Android Studio
+### Software Development
+- C++
+- Java
+- Kotlin
+- Python
 
-**Tools & Others:**
-- Git & GitHub, Docker
-- AWS Basics, Linux
-- Postman, Figma, VS Code
+### Tools
+- Git and GitHub
+- Docker
+- Linux
+- Postman
+- Figma
+- VS Code
 
-### 📂 Featured Projects
+## Featured Projects
 
-| Project | Tech Stack | Live Demo |
-|---------|------------|-----------|
-| Weather Forecast | React, Open-Meteo API | [Live](https://weatherforcast-six.vercel.app/) |
-| Local Technician Finder | MERN Stack | [Live](https://local-technician-finder-project.vercel.app/) |
-| HerboSphere | HTML5, CSS3, JS | [Live](https://herbosphere.vercel.app/) |
+| Project | Tech Stack | Link |
+|---------|------------|------|
+| Weather Forecast | React, Open-Meteo API | [Live Demo](https://weatherforcast-six.vercel.app/) |
+| Local Technician Finder | MERN Stack | [Live Demo](https://local-technician-finder-project.vercel.app/) |
+| HerboSphere | HTML5, CSS3, JavaScript | [Live Demo](https://herbosphere.vercel.app/) |
 | Music Player | Kotlin, Android | [GitHub](https://github.com/siddharthkrofficial/MusicPlayer) |
-| Typing Test | HTML5, CSS3, JS | [GitHub](https://github.com/siddharthkrofficial/TypingTest) |
+| Typing Test | HTML5, CSS3, JavaScript | [GitHub](https://github.com/siddharthkrofficial/TypingTest) |
 | CityLink Navigator | C++, Graph Algorithms | [GitHub](https://github.com/siddharthkrofficial/CityLink-Navigator) |
 
-### 📫 Connect With Me
+## Portfolio Links
 
-- **GitHub:** [@siddharthkrofficial](https://github.com/siddharthkrofficial/)
-- **LinkedIn:** [siddharthkrofficial](https://www.linkedin.com/in/siddharthkrofficial/)
-- **X (Twitter):** [@sidkrofficial](https://x.com/sidkrofficial)
-- **Email:** siddharth.kumar@email.com
+- Live Website: https://siddharthkrofficial.github.io/
+- Repository: https://github.com/siddharthkrofficial/siddharthkrofficial.github.io
 
-## 🚀 Features
+## Connect With Me
 
-- ✨ Custom animated cursor
-- 🎯 Typed.js style text animation
-- 📱 Fully responsive design
-- 🎨 Dark theme with neon accents
-- 🔄 Scroll-triggered animations
-- 📊 Interactive skill progress bars
-- 🖼️ Dynamic project cards with hover effects
-- 📧 Contact form with submission feedback
-- 📈 Reading progress bar
-- 🧭 Smooth scrolling navigation
+- GitHub: https://github.com/siddharthkrofficial/
+- LinkedIn: https://www.linkedin.com/in/siddharthkrofficial/
+- X (Twitter): https://x.com/sidkrofficial
 
-## 🛠️ Project Structure
+## Features
+
+- Custom animated cursor
+- Typewriter-style text animation
+- Fully responsive design
+- Smooth scrolling navigation
+- Scroll-triggered animations
+- Interactive sections for skills and projects
+
+## Project Structure
+
+```text
+.
+|- CNAME
+|- index.html
+|- README.md
+|- script.js
+|- styles.css
+|- profile.png
+```
+
+## Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/siddharthkrofficial/siddharthkrofficial.github.io.git
+```
+
+2. Open the project folder.
+3. Launch `index.html` in your browser.
+
+## License
+
+This project is open for learning and personal inspiration.
