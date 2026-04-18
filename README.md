@@ -1,160 +1,73 @@
-# Siddharth K - Personal Portfolio
+# Siddharth Kumar — Full Stack Developer Portfolio
 
-A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript. Perfect for showcasing your projects, skills, and experience as an aspiring software engineer.
+> MCA Student | 10+ Projects Built | Full Stack & Software Development
 
-## 🎨 Features
+![Portfolio Preview](https://via.placeholder.com/800x400?text=Siddharth+Kumar+Portfolio)
 
-- **Modern Design**: Clean and contemporary UI with gradient accents
-- **Fully Responsive**: Works seamlessly on desktop, tablet, and mobile devices
-- **Smooth Animations**: CSS animations and JavaScript interactions for enhanced UX
-- **Dark Theme**: Easy on the eyes with a professional dark color scheme
-- **Mobile Navigation**: Hamburger menu for smaller screens
-- **Contact Form**: Functional contact form with validation
-- **Social Links**: Quick access icons to your social profiles
-- **Performance Optimized**: Fast loading with minimal dependencies
+## 📌 Basic Information
 
-## 📁 Project Structure
+This is a modern, interactive portfolio website showcasing my work as a Full Stack Developer and MCA student. The portfolio highlights my skills, projects, and professional background in an engaging, animated interface.
 
-```
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md           # This file
-```
+### 👨‍💻 About Me
 
-## 🚀 Quick Start
+- **Name:** Siddharth Kumar
+- **Current Status:** MCA (Master of Computer Applications) Student
+- **Location:** Punjab, India
+- **Focus Areas:** Full Stack Web Development, Android Development, Software Engineering
+- **Projects Completed:** 10+ (all built during MCA program)
+- **Availability:** Open to opportunities and collaborations
 
-1. **Clone or download** this repository
-2. **Open `index.html`** in your web browser
-3. **Customize** the content with your own information (see below)
+### 🛠️ Tech Stack
 
-## ✏️ Customization Guide
+**Frontend:**
+- HTML5, CSS3, JavaScript (ES2024)
+- React.js, Next.js
+- Tailwind CSS
 
-### Personal Information
+**Backend:**
+- Node.js, Express.js
+- MongoDB, MySQL
+- REST APIs
 
-Edit `index.html` and update:
+**Software Development:**
+- C++, Java, Kotlin
+- Python (Data Science)
+- Android Studio
 
-- **Hero Section**: Change your name, subtitle, and description
-- **About Section**: Update the about text and highlights
-- **Contact Info**: Replace email, phone, and location with your details
+**Tools & Others:**
+- Git & GitHub, Docker
+- AWS Basics, Linux
+- Postman, Figma, VS Code
 
-### Skills
+### 📂 Featured Projects
 
-Modify the skills section in `index.html`:
-- Add or remove skill categories
-- Add or remove individual skills within each category
+| Project | Tech Stack | Live Demo |
+|---------|------------|-----------|
+| Weather Forecast | React, Open-Meteo API | [Live](https://weatherforcast-six.vercel.app/) |
+| Local Technician Finder | MERN Stack | [Live](https://local-technician-finder-project.vercel.app/) |
+| HerboSphere | HTML5, CSS3, JS | [Live](https://herbosphere.vercel.app/) |
+| Music Player | Kotlin, Android | [GitHub](https://github.com/siddharthkrofficial/MusicPlayer) |
+| Typing Test | HTML5, CSS3, JS | [GitHub](https://github.com/siddharthkrofficial/TypingTest) |
+| CityLink Navigator | C++, Graph Algorithms | [GitHub](https://github.com/siddharthkrofficial/CityLink-Navigator) |
 
-### Projects
+### 📫 Connect With Me
 
-Add your actual projects:
-1. Duplicate a project card in the HTML
-2. Update the project title, description, and technologies
-3. Add links to your GitHub code and live demo
-4. Replace the icon with relevant Font Awesome icons
+- **GitHub:** [@siddharthkrofficial](https://github.com/siddharthkrofficial/)
+- **LinkedIn:** [siddharthkrofficial](https://www.linkedin.com/in/siddharthkrofficial/)
+- **X (Twitter):** [@sidkrofficial](https://x.com/sidkrofficial)
+- **Email:** siddharth.kumar@email.com
 
-### Social Links
+## 🚀 Features
 
-Update the social links at the bottom:
-```html
-<a href="https://github.com/yourusername" title="GitHub">
-  <i class="fab fa-github"></i>
-</a>
-```
+- ✨ Custom animated cursor
+- 🎯 Typed.js style text animation
+- 📱 Fully responsive design
+- 🎨 Dark theme with neon accents
+- 🔄 Scroll-triggered animations
+- 📊 Interactive skill progress bars
+- 🖼️ Dynamic project cards with hover effects
+- 📧 Contact form with submission feedback
+- 📈 Reading progress bar
+- 🧭 Smooth scrolling navigation
 
-### Colors & Theme
-
-Edit the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #6366f1;      /* Main brand color */
-    --secondary-color: #ec4899;    /* Accent color */
-    --dark-bg: #0f172a;            /* Dark background */
-    --light-text: #f1f5f9;         /* Light text */
-}
-```
-
-### Contact Form
-
-The contact form includes validation. To make it actually send emails, integrate with:
-- **Formspree** (easy, free)
-- **EmailJS** (JavaScript solution)
-- **Your own backend** (Node.js, Python, etc.)
-
-## 🎯 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
-
-## 🔧 Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with gradients and animations
-- **Vanilla JavaScript**: No dependencies required
-- **Font Awesome 6**: Icon library (CDN)
-
-## ✨ Key JavaScript Features
-
-- **Mobile Menu Toggle**: Responsive navigation
-- **Smooth Scrolling**: Navigation links scroll smoothly
-- **Active Nav Indicator**: Highlights current section
-- **Scroll to Top Button**: Appears on scroll, smooth return to top
-- **Form Validation**: Client-side email and input validation
-- **Intersection Observer**: Fade-in animations on scroll
-- **Keyboard Navigation**: Escape key to close mobile menu
-
-## 📊 Customization Checklist
-
-- [ ] Update your name and professional title
-- [ ] Update your email address and contact info
-- [ ] Add your real projects with descriptions
-- [ ] Update your actual skills and technologies
-- [ ] Add links to your GitHub profile
-- [ ] Connect social media links
-- [ ] Update the color scheme if desired
-- [ ] Change the CNAME for custom domain (if using custom domain)
-- [ ] Deploy to GitHub Pages
-
-## 🚀 Deployment
-
-### GitHub Pages (Free)
-
-1. Push your files to a GitHub repository named `yourusername.github.io`
-2. Your site will be live at `https://yourusername.github.io`
-
-### Custom Domain
-
-1. Add your domain in the CNAME file
-2. Configure DNS settings with your domain provider
-3. Update your repository settings
-
-### Other Hosting
-
-- Netlify
-- Vercel
-- Firebase Hosting
-- Any static hosting service
-
-## 🤝 Contributing
-
-Feel free to modify and improve this template for your own use!
-
-## 📫 Contact
-
-Replace with your actual contact information in the HTML.
-
-## 📄 License
-
-Feel free to use this template for your personal portfolio.
-
----
-
-**Built with ❤️ using HTML, CSS & JavaScript**
+## 🛠️ Project Structure

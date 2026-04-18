@@ -1,325 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddharth K | Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siddharth Kumar – Full Stack Developer Portfolio | MCA Student" />
+  <meta name="theme-color" content="#00e5ff" />
+  <title>Siddharth Kumar — Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand">SK</div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="progress-bar"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ════════ HEADER ════════ -->
+  <header id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="SK" onerror="this.parentElement.style.background='var(--accent)';this.parentElement.style.display='grid';this.parentElement.style.placeItems='center';this.parentElement.innerHTML='<span style=font-family:Space+Mono,monospace;font-weight:700;color:#0a0e1a;font-size:.8rem>SK</span>';" />
+          </div>
+          Siddharth<span>.dev</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" id="nav-menu">
+            <li><a href="#hero"     class="active">Home</a></li>
+            <li><a href="#about"           >About</a></li>
+            <li><a href="#skills"          >Skills</a></li>
+            <li><a href="#projects"        >Projects</a></li>
+            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════ HERO ════════ -->
+  <section id="hero">
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <div class="hero-status reveal">
+            <span class="status-dot"></span> Available for work
+          </div>
+          <h1 class="hero-name reveal d1">
+            Hi, I'm<br /><span class="accent-name">Siddharth Kumar</span>
+          </h1>
+          <div class="hero-role reveal d2">
+            I build <span class="typed-text" id="typed"></span><span class="typed-cursor"></span>
+          </div>
+          <p class="hero-bio reveal d3">
+            MCA student & passionate Full Stack Developer crafting high-performance web and mobile applications. I turn ideas into fast, beautiful, and scalable digital products using modern technologies.
+          </p>
+          <div class="hero-actions reveal d4">
+            <a href="#projects" class="btn-primary">✦ View Projects</a>
+            <a href="#contact"  class="btn-outline">Let's Talk →</a>
+          </div>
+          <div class="hero-socials reveal d5">
+            <a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">in</a>
+            <a href="https://x.com/sidkrofficial" target="_blank" rel="noopener" class="social-btn" title="X / Twitter">𝕏</a>
+            <a href="#contact" class="social-btn" title="Email">@</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal d2">
+          <div class="profile-card">
+            <div class="ring-spin"   aria-hidden="true"></div>
+            <div class="ring-dashed" aria-hidden="true"></div>
+            <div class="avatar-wrap">
+              <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="Siddharth Kumar" onerror="this.style.display='none'" />
+            </div>
+            <div class="skill-chip chip-1">React.js</div>
+            <div class="skill-chip chip-2">Node.js</div>
+            <div class="skill-chip chip-3">C++</div>
+            <div class="skill-chip chip-4">Java</div>
+            <div class="skill-chip chip-5">MongoDB</div>
+            <div class="hero-stats">
+              <div class="hero-stat"><div class="n">10+</div><div class="l">Projects</div></div>
+              <div class="hero-stat"><div class="n">5+</div><div class="l">Tech Stacks</div></div>
+              <div class="hero-stat"><div class="n">MCA</div><div class="l">Current</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ ABOUT ════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-img-wrap reveal-left">
+          <div class="about-img-box">
+            <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="Siddharth Kumar" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a2236,#0d1b2e)';this.style.display='none';" />
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <span class="section-label">// About Me</span>
+          <h2 class="section-title">Full Stack &amp; Software Developer </h2>
+          <div class="about-tags">
+            <span class="tag">HTML / CSS / JS</span>
+            <span class="tag purple">React</span>
+            <span class="tag purple">Node.js</span>
+            <span class="tag green">Python</span>
+            <span class="tag yellow">C++</span>
+            <span class="tag yellow">Java</span>
+            <span class="tag red">Kotlin</span>
+            <span class="tag green">MERN Stack</span>
+          </div>
+          <p class="about-text">
+            I'm Siddharth, currently pursuing my Master of Computer Applications (MCA). I have a deep passion for building impactful applications — from responsive web apps to native Android apps and system-level programs. I enjoy every layer of the stack.
+          </p>
+          <p class="about-text">
+            Over the course of my MCA, I have built 10+ full-stack projects, honing my skills in React, Node.js, Python, C++, Java, and Kotlin. I bridge web development and software engineering to deliver fast, scalable, and user-centric solutions.
+          </p>
+          <div class="info-grid">
+            <div class="info-item">
+              <div class="info-label">Name</div>
+              <div class="info-val">Siddharth Kumar</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Location</div>
+              <div class="info-val">Punjab, India</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Degree</div>
+              <div class="info-val">MCA (Pursuing)</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">GitHub</div>
+              <div class="info-val"><a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener">siddharthkrofficial</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">LinkedIn</div>
+              <div class="info-val"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener">siddharthkrofficial</a></div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Projects Built</div>
+              <div class="info-val" style="color:var(--green)">10+ (during MCA)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ SKILLS ════════ -->
+  <section id="skills">
+    <div class="container">
+      <span class="section-label reveal">// Tech Stack</span>
+      <h2 class="section-title reveal d1">Skills &amp; Technologies</h2>
+      <p class="section-desc reveal d2">Languages, frameworks, and tools I use to bring ideas to life.</p>
+
+      <div class="skills-layout">
+
+        <div class="reveal-left">
+          <div class="skill-group-title">Web Development</div>
+          <div class="skill-bar-wrap" data-pct="92">
+            <div class="skill-bar-header"><span class="skill-name">HTML5 &amp; CSS3</span><span class="skill-pct">92%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="85">
+            <div class="skill-bar-header"><span class="skill-name">JavaScript (ES2024)</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="80">
+            <div class="skill-bar-header"><span class="skill-name">React.js</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="78">
+            <div class="skill-bar-header"><span class="skill-name">Node.js &amp; Express</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="70">
+            <div class="skill-bar-header"><span class="skill-name">MongoDB &amp; SQL</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+
+          <div class="skill-group-title" style="margin-top:2rem">Software Development</div>
+          <div class="skill-bar-wrap" data-pct="82">
+            <div class="skill-bar-header"><span class="skill-name">C++</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="78">
+            <div class="skill-bar-header"><span class="skill-name">Java</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="72">
+            <div class="skill-bar-header"><span class="skill-name">Kotlin (Android)</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="75">
+            <div class="skill-bar-header"><span class="skill-name">Python</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <div class="skill-group-title">All Technologies</div>
+          <div class="tech-grid">
+            <div class="tech-pill">React.js</div>
+            <div class="tech-pill">Node.js</div>
+            <div class="tech-pill">Python</div>
+            <div class="tech-pill">C++</div>
+            <div class="tech-pill">Java</div>
+            <div class="tech-pill">Kotlin</div>
+            <div class="tech-pill">MongoDB</div>
+            <div class="tech-pill">Express.js</div>
+            <div class="tech-pill">MySQL</div>
+            <div class="tech-pill">Android Studio</div>
+            <div class="tech-pill">Git &amp; GitHub</div>
+            <div class="tech-pill">REST APIs</div>
+            <div class="tech-pill">Tailwind CSS</div>
+            <div class="tech-pill">Next.js</div>
+            <div class="tech-pill">VS Code</div>
+            <div class="tech-pill">Postman</div>
+            <div class="tech-pill">Figma</div>
+            <div class="tech-pill">Linux</div>
+            <div class="tech-pill">Docker</div>
+            <div class="tech-pill">AWS Basics</div>
+          </div>
+
+          <div class="skill-group-title" style="margin-top:2rem">Data Science</div>
+          <div class="skill-bar-wrap" data-pct="72">
+            <div class="skill-bar-header"><span class="skill-name">Pandas &amp; NumPy</span><span class="skill-pct">72%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="65">
+            <div class="skill-bar-header"><span class="skill-name">Machine Learning</span><span class="skill-pct">65%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-bar-wrap" data-pct="68">
+            <div class="skill-bar-header"><span class="skill-name">Data Visualisation</span><span class="skill-pct">68%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PROJECTS ════════ -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-label reveal">// My Work</span>
+      <h2 class="section-title reveal d1">Featured Projects</h2>
+      <p class="section-desc reveal d2">10+ projects delivered — here are some highlights. Click the icons to view live demos or source code.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal d1">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d2137,#1a4a6c)"></div>
+            <div class="project-thumb-icon">🌤️</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/weatherforcast" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://weatherforcast-six.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-cyan">React</span>
+              <span class="project-tag pt-cyan">Open-Meteo API</span>
+              <span class="project-tag pt-cyan">Vercel</span>
+            </div>
+            <h3>Weather Forecast</h3>
+            <p>Real-time weather app built with React and Open-Meteo API. Shows forecasts, temperature, and conditions for any location.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal d2">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a0d37,#2d1a5c)"></div>
+            <div class="project-thumb-icon">🔧</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/local-technician-finder-projest" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://local-technician-finder-project.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-purple">MongoDB</span>
+              <span class="project-tag pt-purple">Express</span>
+              <span class="project-tag pt-purple">React</span>
+              <span class="project-tag pt-purple">Node.js</span>
+            </div>
+            <h3>Local Technician Finder</h3>
+            <p>Full-stack MERN platform to discover and connect with local technicians. Features search, profiles, and booking.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal d3">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d3724,#1a5c3a)"></div>
+            <div class="project-thumb-icon">🌿</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/herbosphere" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://herbosphere.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-green">HTML5</span>
+              <span class="project-tag pt-green">CSS3</span>
+              <span class="project-tag pt-green">JavaScript</span>
+            </div>
+            <h3>HerboSphere</h3>
+            <p>A beautifully designed herbal plant information website. Explore plant benefits, uses, and growing tips with a clean UI.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal d1">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#2a0d37,#4c1a6c)"></div>
+            <div class="project-thumb-icon">🎵</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-red">Kotlin</span>
+              <span class="project-tag pt-red">Android</span>
+              <span class="project-tag pt-red">MediaPlayer API</span>
+            </div>
+            <h3>Music Player</h3>
+            <p>Native Android music player built with Kotlin. Features playlist management, background playback, and sleek UI controls.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal d2">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a2a0d,#2f4a1a)"></div>
+            <div class="project-thumb-icon">⌨️</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-green">HTML5</span>
+              <span class="project-tag pt-green">CSS3</span>
+              <span class="project-tag pt-green">JavaScript</span>
+            </div>
+            <h3>Typing Test</h3>
+            <p>Interactive typing speed test app that measures WPM, accuracy, and highlights errors in real time with live stats.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal d3">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#2a1a0d,#5c3a1a)"></div>
+            <div class="project-thumb-icon">🗺️</div>
+            <div class="project-links">
+              <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
+              <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-yellow">C++</span>
+              <span class="project-tag pt-yellow">Graph Algorithms</span>
+              <span class="project-tag pt-yellow">DSA</span>
+            </div>
+            <h3>CityLink Navigator</h3>
+            <p>C++ console application using graph algorithms (Dijkstra/BFS) to find shortest routes between city locations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ CONTACT ════════ -->
+  <section id="contact">
+    <div class="container">
+      <span class="section-label reveal">// Get In Touch</span>
+      <h2 class="section-title reveal d1">Let's Work Together</h2>
+      <p class="section-desc reveal d2">Have a project in mind? I'd love to hear about it. Drop me a message!</p>
+
+      <div class="contact-grid">
+        <div class="reveal-left">
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="ci-icon">📧</div>
+              <div class="ci-text"><div class="ci-label">Email</div><div class="ci-val">siddharthkr468@email.com</div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">💻</div>
+              <div class="ci-text"><div class="ci-label">GitHub</div><div class="ci-val"><a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener">github.com/siddharthkrofficial</a></div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">🔗</div>
+              <div class="ci-text"><div class="ci-label">LinkedIn</div><div class="ci-val"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener">in/siddharthkrofficial</a></div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">𝕏</div>
+              <div class="ci-text"><div class="ci-label">X / Twitter</div><div class="ci-val"><a href="https://x.com/sidkrofficial" target="_blank" rel="noopener">@sidkrofficial</a></div></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">💼</div>
+              <div class="ci-text"><div class="ci-label">Availability</div><div class="ci-val" style="color:var(--green)">Open to Opportunities</div></div>
+            </div>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">in</a>
+            <a href="https://x.com/sidkrofficial" target="_blank" rel="noopener" class="social-btn" title="X">𝕏</a>
+            <a href="#contact" class="social-btn" title="Email">@</a>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">YOUR NAME</label>
+                <input type="text" id="fname" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">EMAIL ADDRESS</label>
+                <input type="email" id="femail" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">SUBJECT</label>
+              <input type="text" id="fsubject" placeholder="Project Inquiry" required />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">MESSAGE</label>
+              <textarea id="fmessage" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <button type="submit" class="btn-send" id="send-btn">
+              <span id="send-text">Send Message ✦</span>
             </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+          </form>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Siddharth K</span></h1>
-            <p class="hero-subtitle">Aspiring Software Engineer | Full Stack Developer</p>
-            <p class="hero-description">Building innovative solutions with clean code and modern technologies</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll to explore</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-    </section>
+  <!-- ════════ FOOTER ════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Siddharth Kumar. Crafted with ❤️ &amp; lots of ☕ — MCA Student | 10+ Projects Built</p>
+        <div class="tech-badge"><span>HTML5</span> · <span>CSS3</span> · <span>JavaScript</span> · <span>React</span> · <span>C++</span> · <span>Kotlin</span></div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a passionate software engineer with a keen interest in building web applications and solving complex problems through code. I'm committed to continuous learning and staying updated with the latest technologies in the industry.
-                    </p>
-                    <p>
-                        With a strong foundation in computer science fundamentals and hands-on experience with modern development frameworks, I strive to create efficient, scalable, and user-friendly applications that make a real impact.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-code"></i>
-                            <h3>Clean Code</h3>
-                            <p>Writing maintainable and efficient code</p>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <h3>Responsive Design</h3>
-                            <p>Mobile-first approach to web development</p>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <h3>Problem Solving</h3>
-                            <p>Creative solutions to complex challenges</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Responsive Design</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">Database Design</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Linux</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Other</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithms</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Team Collaboration</span>
-                        <span class="skill-tag">Agile Methodology</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack web application built with React and Node.js featuring product catalogs, shopping cart, and payment integration.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management tool with real-time updates, user authentication, and project organization features.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>Firebase</span>
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-weather-cloud"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>A responsive weather application that provides real-time forecasts, location-based services, and historical weather data visualization.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>API Integration</span>
-                            <span>Chart.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Movie Review Platform</h3>
-                        <p>A platform where users can review and rate movies, with advanced filtering, user profiles, and social features.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Express</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Calculator App</h3>
-                        <p>A modern calculator with advanced features including calculation history, keyboard support, and theme customization.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                            <span>LocalStorage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-puzzle-piece"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>This responsive portfolio website showcasing projects, skills, and experience with smooth animations and interactions.</p>
-                        <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link-btn"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="link-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-description">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:siddharth@example.com">siddharth@example.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+1234567890">+1 (234) 567-890</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Your City, Your Country</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Links -->
-    <section class="social-links">
-        <div class="container">
-            <div class="social-icons">
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" title="CodePen"><i class="fab fa-codepen"></i></a>
-                <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Siddharth K. All rights reserved.</p>
-            <p>Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
