@@ -1,479 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Siddharth Kumar – Full Stack Developer Portfolio | MCA Student" />
-  <meta name="theme-color" content="#00e5ff" />
-  <title>Siddharth Kumar — Full Stack Developer</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Siddharth Kumar – Full Stack & Software Developer"/>
+<title>Siddharth Kumar</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<!-- Three.js r128 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
 </head>
 <body>
 
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-  <div id="progress-bar"></div>
-  <div class="grid-bg" aria-hidden="true"></div>
+<div id="c-dot"></div>
+<div id="c-ring"></div>
+<div id="progress-bar"></div>
 
-  <!-- ════════ HEADER ════════ -->
-  <header id="site-header">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#hero" class="nav-logo">
-          <div class="nav-logo-icon">
-            <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="SK" onerror="this.parentElement.style.background='var(--accent)';this.parentElement.style.display='grid';this.parentElement.style.placeItems='center';this.parentElement.innerHTML='<span style=font-family:Space+Mono,monospace;font-weight:700;color:#0a0e1a;font-size:.8rem>SK</span>';" />
+<!-- Global Three.js particle background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="site-hdr">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-img">
+        <img src="profile.png" alt="SK"/>
+      </div>
+      Siddharth<span class="dot">.</span>DEV
+    </a>
+    <nav>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero"     class="active">HOME</a></li>
+        <li><a href="#about"           >ABOUT</a></li>
+        <li><a href="#skills"          >SKILLS</a></li>
+        <li><a href="#projects"        >WORK</a></li>
+        <li><a href="#contact" class="nav-cta">HIRE ME</a></li>
+      </ul>
+      <button class="hamburger" id="hbg" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <div class="hero-badge reveal"><span class="pulse"></span>AVAILABLE FOR WORK</div>
+        <h1 class="hero-name reveal d1">
+          <span class="line1">Hi, I'm</span>
+          <span class="line2">Siddharth Kumar</span>
+        </h1>
+        <div class="hero-role reveal d2">
+          I build <span class="t-text" id="typed"></span><span class="t-cur"></span>
+        </div>
+        <p class="hero-bio reveal d3">
+          MCA student &amp; passionate Full Stack Developer crafting high-performance web and mobile applications. I turn ideas into fast, beautiful, and scalable digital products using modern technologies.
+        </p>
+        <div class="hero-btns reveal d4">
+          <a href="#projects" class="btn-glow">✦ View Projects</a>
+          <a href="#contact"  class="btn-ghost">Let's Talk →</a>
+        </div>
+        <div class="hero-socials reveal d5">
+          <a href="https://github.com/siddharthkrofficial/" target="_blank" class="soc-btn" title="GitHub">GH</a>
+          <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" class="soc-btn" title="LinkedIn">IN</a>
+          <a href="https://x.com/sidkrofficial" target="_blank" class="soc-btn" title="X">𝕏</a>
+          <a href="#contact" class="soc-btn" title="Email">@</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: 3D Profile -->
+      <div class="hero-visual reveal d2">
+        <div class="profile-3d-wrap">
+          <canvas id="profile-canvas"></canvas>
+          <div class="avatar-circle">
+            <img src="profile.png" alt="Siddharth Kumar"/>
           </div>
-          Siddharth<span>.dev</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <ul class="nav-links" id="nav-menu">
-            <li><a href="#hero"     class="active">Home</a></li>
-            <li><a href="#about"           >About</a></li>
-            <li><a href="#skills"          >Skills</a></li>
-            <li><a href="#projects"        >Projects</a></li>
-            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-          </ul>
-          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span><span></span><span></span>
+          <div class="f-chip fc1">React.js</div>
+          <div class="f-chip fc2">Node.js</div>
+          <div class="f-chip fc3">Python</div>
+          <div class="f-chip fc4">Kotlin</div>
+          <div class="f-chip fc5">C++</div>
+          <div class="f-chip fc6">java</div>
+          <div class="f-chip fc7">Php</div> 
+          <div class="hero-stats">
+            <div class="h-stat"><div class="n">10+</div><div class="l">Projects</div></div>
+            <div class="h-stat"><div class="n">5+</div><div class="l">Stacks</div></div>
+            <div class="h-stat"><div class="n">MCA</div><div class="l">Degree</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-wrap reveal-left" id="about-tilt">
+        <div class="about-frame" id="about-frame">
+          <img src="profile.png" alt="Siddharth Kumar"/>
+          <div class="about-frame-label">SIDDHARTH KUMAR — FULL STACK DEV</div>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <span class="sec-label">ABOUT ME</span>
+        <h2 class="sec-title">Full Stack &amp;<br/>Software Engineer</h2>
+        <div class="about-tags">
+          <span class="atag at-c">HTML/CSS/JS</span>
+          <span class="atag at-c">React</span>
+          <span class="atag at-p">Node.js</span>
+          <span class="atag at-p">MERN Stack</span>
+          <span class="atag at-g">Python</span>
+          <span class="atag at-y">C++</span>
+          <span class="atag at-y">Java</span>
+          <span class="atag at-r">Kotlin</span>
+          <span class="atag at-g">Web Dev</span>
+          <span class="atag at-r">Software Dev</span>
+        </div>
+        <p class="about-txt">I'm Siddharth, currently pursuing my Master of Computer Applications (MCA). I have a deep passion for building impactful applications — from responsive web apps to native Android apps and system-level programs. I enjoy every layer of the stack.</p>
+        <p class="about-txt">Over the course of my MCA, I have built 10+ full-stack projects, honing my skills in React, Node.js, Python, C++, Java, and Kotlin. I bridge web development and software engineering to deliver fast, scalable, and user-centric solutions.</p>
+        <div class="info-grid">
+          <div class="info-item"><div class="il">Name</div><div class="iv">Siddharth Kumar</div></div>
+          <div class="info-item"><div class="il">Location</div><div class="iv">Punjab, India</div></div>
+          <div class="info-item"><div class="il">Degree</div><div class="iv">MCA</div></div>
+          <div class="info-item"><div class="il">GitHub</div><div class="iv"><a href="https://github.com/siddharthkrofficial/" target="_blank">siddharthkrofficial</a></div></div>
+          <div class="info-item"><div class="il">LinkedIn</div><div class="iv"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank">siddharthkrofficial</a></div></div>
+          <div class="info-item"><div class="il">Status</div><div class="iv" style="color:#34d399">✓ Available</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SKILLS ═══════════ -->
+<section id="skills">
+  <canvas id="skills-canvas"></canvas>
+  <div class="container">
+    <span class="sec-label reveal">TECH STACK</span>
+    <h2 class="sec-title reveal d1">Skills &amp; Technologies</h2>
+    <p class="sec-desc reveal d2">Languages, frameworks, and tools across web, software, and data.</p>
+
+    <div class="skills-layout">
+      <div class="reveal-left">
+        <div class="sg-title">Web Development</div>
+        <div class="sbar-wrap" data-pct="92"><div class="sbar-hdr"><span class="sbar-name">HTML5 &amp; CSS3</span><span class="sbar-pct">92%</span></div><div class="sbar-track"><div class="sbar-fill fc-web"></div></div></div>
+        <div class="sbar-wrap" data-pct="85"><div class="sbar-hdr"><span class="sbar-name">JavaScript (ES2024)</span><span class="sbar-pct">85%</span></div><div class="sbar-track"><div class="sbar-fill fc-web"></div></div></div>
+        <div class="sbar-wrap" data-pct="80"><div class="sbar-hdr"><span class="sbar-name">React.js</span><span class="sbar-pct">80%</span></div><div class="sbar-track"><div class="sbar-fill fc-web"></div></div></div>
+        <div class="sbar-wrap" data-pct="78"><div class="sbar-hdr"><span class="sbar-name">Node.js &amp; Express</span><span class="sbar-pct">78%</span></div><div class="sbar-track"><div class="sbar-fill fc-web"></div></div></div>
+        <div class="sbar-wrap" data-pct="70"><div class="sbar-hdr"><span class="sbar-name">MongoDB &amp; SQL</span><span class="sbar-pct">70%</span></div><div class="sbar-track"><div class="sbar-fill fc-web"></div></div></div>
+
+        <div class="sg-title" style="margin-top:2.25rem">Software Development</div>
+        <div class="sbar-wrap" data-pct="82"><div class="sbar-hdr"><span class="sbar-name">C++</span><span class="sbar-pct">82%</span></div><div class="sbar-track"><div class="sbar-fill fc-soft"></div></div></div>
+        <div class="sbar-wrap" data-pct="78"><div class="sbar-hdr"><span class="sbar-name">Java</span><span class="sbar-pct">78%</span></div><div class="sbar-track"><div class="sbar-fill fc-soft"></div></div></div>
+        <div class="sbar-wrap" data-pct="72"><div class="sbar-hdr"><span class="sbar-name">Kotlin (Android)</span><span class="sbar-pct">72%</span></div><div class="sbar-track"><div class="sbar-fill fc-soft"></div></div></div>
+        <div class="sbar-wrap" data-pct="75"><div class="sbar-hdr"><span class="sbar-name">Python</span><span class="sbar-pct">75%</span></div><div class="sbar-track"><div class="sbar-fill fc-soft"></div></div></div>
+
+        <div class="sg-title" style="margin-top:2.25rem">Data Science</div>
+        <div class="sbar-wrap" data-pct="72"><div class="sbar-hdr"><span class="sbar-name">Pandas &amp; NumPy</span><span class="sbar-pct">72%</span></div><div class="sbar-track"><div class="sbar-fill fc-data"></div></div></div>
+        <div class="sbar-wrap" data-pct="65"><div class="sbar-hdr"><span class="sbar-name">Machine Learning</span><span class="sbar-pct">65%</span></div><div class="sbar-track"><div class="sbar-fill fc-data"></div></div></div>
+        <div class="sbar-wrap" data-pct="68"><div class="sbar-hdr"><span class="sbar-name">Data Visualisation</span><span class="sbar-pct">68%</span></div><div class="sbar-track"><div class="sbar-fill fc-data"></div></div></div>
+      </div>
+
+      <div class="reveal-right">
+        <div class="sg-title">All Technologies</div>
+        <div class="tech-grid">
+          <div class="t-pill">React.js</div><div class="t-pill">Node.js</div>
+          <div class="t-pill">Python</div><div class="t-pill">C++</div>
+          <div class="t-pill">Java</div><div class="t-pill">Kotlin</div>
+          <div class="t-pill">MongoDB</div><div class="t-pill">Express.js</div>
+          <div class="t-pill">MySQL</div><div class="t-pill">Android Studio</div>
+          <div class="t-pill">Git &amp; GitHub</div><div class="t-pill">REST APIs</div>
+          <div class="t-pill">Tailwind CSS</div><div class="t-pill">Next.js</div>
+          <div class="t-pill">Three.js</div><div class="t-pill">Docker</div>
+          <div class="t-pill">VS Code</div><div class="t-pill">Postman</div>
+          <div class="t-pill">Figma</div><div class="t-pill">Linux</div>
+          <div class="t-pill">AWS Basics</div><div class="t-pill">OpenGL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROJECTS ═══════════ -->
+<section id="projects">
+  <div class="container">
+    <span class="sec-label reveal">MY WORK</span>
+    <h2 class="sec-title reveal d1">Featured Projects</h2>
+    <p class="sec-desc reveal d2">Real projects — live, open source, and built with love. Hover to tilt, click links to explore.</p>
+
+    <div class="proj-grid">
+
+      <div class="proj-card reveal d1" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#030d1a,#0a2545,#051530)"></div>
+          <div class="proj-icon">🌤️</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/weatherforcast" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://weatherforcast-six.vercel.app/" target="_blank" class="proj-a-btn" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-c">React</span>
+            <span class="ptag ptag-c">Open-Meteo API</span>
+            <span class="ptag ptag-c">Vercel</span>
+          </div>
+          <h3>Weather Forecast</h3>
+          <p>Real-time weather app with React &amp; Open-Meteo API. Live forecasts, temperature, wind, and conditions for any city.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d2" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#0d0a1f,#1a103c,#080518)"></div>
+          <div class="proj-icon">🔧</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/local-technician-finder-projest" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://local-technician-finder-project.vercel.app/" target="_blank" class="proj-a-btn" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-p">MongoDB</span>
+            <span class="ptag ptag-p">Express</span>
+            <span class="ptag ptag-p">React</span>
+            <span class="ptag ptag-p">Node.js</span>
+          </div>
+          <h3>Local Technician Finder</h3>
+          <p>Full-stack MERN platform to discover and book local technicians. Search, profiles, and real-time booking system.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d3" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#021a0d,#054020,#010e07)"></div>
+          <div class="proj-icon">🌿</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/herbosphere" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://herbosphere.vercel.app/" target="_blank" class="proj-a-btn" title="Live">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-g">HTML5</span>
+            <span class="ptag ptag-g">CSS3</span>
+            <span class="ptag ptag-g">JavaScript</span>
+          </div>
+          <h3>HerboSphere</h3>
+          <p>Herbal plant information website. Explore plant benefits, uses, and care guides with a beautifully designed UI.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d1" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#1a0530,#350a5c,#0d0220)"></div>
+          <div class="proj-icon">🎵</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" class="proj-a-btn" title="Repo">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-r">Kotlin</span>
+            <span class="ptag ptag-r">Android</span>
+            <span class="ptag ptag-r">MediaPlayer API</span>
+          </div>
+          <h3>Music Player</h3>
+          <p>Native Android music player in Kotlin. Background playback, playlist management, and a sleek modern UI.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d2" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#021a0a,#084020,#010d05)"></div>
+          <div class="proj-icon">⌨️</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" class="proj-a-btn" title="Repo">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-g">HTML5</span>
+            <span class="ptag ptag-g">CSS3</span>
+            <span class="ptag ptag-g">JavaScript</span>
+          </div>
+          <h3>Typing Test</h3>
+          <p>Interactive typing speed test measuring WPM and accuracy. Real-time error highlighting and live performance stats.</p>
+        </div>
+      </div>
+
+      <div class="proj-card reveal d3" data-tilt>
+        <div class="proj-thumb">
+          <div class="proj-bg" style="background:linear-gradient(135deg,#1a0d02,#3d2005,#0d0701)"></div>
+          <div class="proj-icon">🗺️</div>
+          <div class="proj-action-links">
+            <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" class="proj-a-btn" title="Code">⌘</a>
+            <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" class="proj-a-btn" title="Repo">↗</a>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tags">
+            <span class="ptag ptag-y">C++</span>
+            <span class="ptag ptag-y">Graphs</span>
+            <span class="ptag ptag-y">DSA</span>
+          </div>
+          <h3>CityLink Navigator</h3>
+          <p>C++ console app using Dijkstra's algorithm to compute shortest paths between city locations. DSA in action.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact">
+  <div class="container">
+    <span class="sec-label reveal">GET IN TOUCH</span>
+    <h2 class="sec-title reveal d1">Let's Build<br/>Something Amazing</h2>
+    <p class="sec-desc reveal d2">Open to freelance projects, collaborations, and full-time opportunities. Let's talk!</p>
+
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <div class="contact-cards">
+          <div class="cc-item"><div class="cc-icon">📧</div><div><div class="cc-label">Email</div><div class="cc-val">siddharthkr468@email.com</div></div></div>
+          <div class="cc-item"><div class="cc-icon">💻</div><div><div class="cc-label">GitHub</div><div class="cc-val"><a href="https://github.com/siddharthkrofficial/" target="_blank">github.com/siddharthkrofficial</a></div></div></div>
+          <div class="cc-item"><div class="cc-icon">🔗</div><div><div class="cc-label">LinkedIn</div><div class="cc-val"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank">in/siddharthkrofficial</a></div></div></div>
+          <div class="cc-item"><div class="cc-icon">𝕏</div><div><div class="cc-label">X / Twitter</div><div class="cc-val"><a href="https://x.com/sidkrofficial" target="_blank">@sidkrofficial</a></div></div></div>
+          <div class="cc-item"><div class="cc-icon">📍</div><div><div class="cc-label">Location</div><div class="cc-val" style="color:#34d399">Punjab, India — Available Remotely</div></div></div>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/siddharthkrofficial/" target="_blank" class="soc-btn">GH</a>
+          <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" class="soc-btn">IN</a>
+          <a href="https://x.com/sidkrofficial" target="_blank" class="soc-btn">𝕏</a>
+          <a href="#contact" class="soc-btn">@</a>
+        </div>
+      </div>
+
+      <div class="reveal-right">
+        <form class="cform" id="cform" onsubmit="handleForm(event)">
+          <div class="form-row2">
+            <div class="fg"><label>YOUR NAME</label><input type="text" placeholder="Enter your name" required/></div>
+            <div class="fg"><label>EMAIL</label><input type="email" placeholder="Enter your email" required/></div>
+          </div>
+          <div class="fg"><label>SUBJECT</label><input type="text" placeholder="Project Inquiry" required/></div>
+          <div class="fg"><label>MESSAGE</label><textarea placeholder="Tell me about your project…" required></textarea></div>
+          <button type="submit" class="btn-send" id="send-btn">
+            <span id="send-txt">SEND MESSAGE ✦</span>
           </button>
-        </nav>
+        </form>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- ════════ HERO ════════ -->
-  <section id="hero">
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
-    <div class="orb orb-3" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero-inner">
-
-        <div class="hero-text">
-          <div class="hero-status reveal">
-            <span class="status-dot"></span> Available for work
-          </div>
-          <h1 class="hero-name reveal d1">
-            Hi, I'm<br /><span class="accent-name">Siddharth Kumar</span>
-          </h1>
-          <div class="hero-role reveal d2">
-            I build <span class="typed-text" id="typed"></span><span class="typed-cursor"></span>
-          </div>
-          <p class="hero-bio reveal d3">
-            MCA student & passionate Full Stack Developer crafting high-performance web and mobile applications. I turn ideas into fast, beautiful, and scalable digital products using modern technologies.
-          </p>
-          <div class="hero-actions reveal d4">
-            <a href="#projects" class="btn-primary">✦ View Projects</a>
-            <a href="#contact"  class="btn-outline">Let's Talk →</a>
-          </div>
-          <div class="hero-socials reveal d5">
-            <a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
-            <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">in</a>
-            <a href="https://x.com/sidkrofficial" target="_blank" rel="noopener" class="social-btn" title="X / Twitter">𝕏</a>
-            <a href="#contact" class="social-btn" title="Email">@</a>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal d2">
-          <div class="profile-card">
-            <div class="ring-spin"   aria-hidden="true"></div>
-            <div class="ring-dashed" aria-hidden="true"></div>
-            <div class="avatar-wrap">
-              <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="Siddharth Kumar" onerror="this.style.display='none'" />
-            </div>
-            <div class="skill-chip chip-1">React.js</div>
-            <div class="skill-chip chip-2">Node.js</div>
-            <div class="skill-chip chip-3">C++</div>
-            <div class="skill-chip chip-4">Java</div>
-            <div class="skill-chip chip-5">MongoDB</div>
-            <div class="hero-stats">
-              <div class="hero-stat"><div class="n">10+</div><div class="l">Projects</div></div>
-              <div class="hero-stat"><div class="n">5+</div><div class="l">Tech Stacks</div></div>
-              <div class="hero-stat"><div class="n">MCA</div><div class="l">Current</div></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p>© 2026 Siddharth Kumar</p>
+      <div class="f-badge"><span>THREE.JS</span> · <span>HTML5</span> · <span>CSS3</span> · <span>JAVASCRIPT</span></div>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- ════════ ABOUT ════════ -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
+<button id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="script.js"></script>
 
-        <div class="about-img-wrap reveal-left">
-          <div class="about-img-box">
-            <img src="https://media-del2-2.cdn.whatsapp.net/v/t61.24694-24/546400315_1684829565515472_6316458459727779115_n.jpg?ccb=11-4&oh=01_Q5Aa4QFM-jZU9ndO1OrxjlWaS4pU00Iu4jUOsiX5vRuSS3PxxQ&oe=69EFF0D4&_nc_sid=5e03e0&_nc_cat=103" alt="Siddharth Kumar" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a2236,#0d1b2e)';this.style.display='none';" />
-          </div>
-        </div>
 
-        <div class="reveal-right">
-          <span class="section-label">// About Me</span>
-          <h2 class="section-title">Full Stack &amp; Software Developer </h2>
-          <div class="about-tags">
-            <span class="tag">HTML / CSS / JS</span>
-            <span class="tag purple">React</span>
-            <span class="tag purple">Node.js</span>
-            <span class="tag green">Python</span>
-            <span class="tag yellow">C++</span>
-            <span class="tag yellow">Java</span>
-            <span class="tag red">Kotlin</span>
-            <span class="tag green">MERN Stack</span>
-          </div>
-          <p class="about-text">
-            I'm Siddharth, currently pursuing my Master of Computer Applications (MCA). I have a deep passion for building impactful applications — from responsive web apps to native Android apps and system-level programs. I enjoy every layer of the stack.
-          </p>
-          <p class="about-text">
-            Over the course of my MCA, I have built 10+ full-stack projects, honing my skills in React, Node.js, Python, C++, Java, and Kotlin. I bridge web development and software engineering to deliver fast, scalable, and user-centric solutions.
-          </p>
-          <div class="info-grid">
-            <div class="info-item">
-              <div class="info-label">Name</div>
-              <div class="info-val">Siddharth Kumar</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">Location</div>
-              <div class="info-val">Punjab, India</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">Degree</div>
-              <div class="info-val">MCA (Pursuing)</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">GitHub</div>
-              <div class="info-val"><a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener">siddharthkrofficial</a></div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">LinkedIn</div>
-              <div class="info-val"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener">siddharthkrofficial</a></div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">Projects Built</div>
-              <div class="info-val" style="color:var(--green)">10+ (during MCA)</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════ SKILLS ════════ -->
-  <section id="skills">
-    <div class="container">
-      <span class="section-label reveal">// Tech Stack</span>
-      <h2 class="section-title reveal d1">Skills &amp; Technologies</h2>
-      <p class="section-desc reveal d2">Languages, frameworks, and tools I use to bring ideas to life.</p>
-
-      <div class="skills-layout">
-
-        <div class="reveal-left">
-          <div class="skill-group-title">Web Development</div>
-          <div class="skill-bar-wrap" data-pct="92">
-            <div class="skill-bar-header"><span class="skill-name">HTML5 &amp; CSS3</span><span class="skill-pct">92%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="85">
-            <div class="skill-bar-header"><span class="skill-name">JavaScript (ES2024)</span><span class="skill-pct">85%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="80">
-            <div class="skill-bar-header"><span class="skill-name">React.js</span><span class="skill-pct">80%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="78">
-            <div class="skill-bar-header"><span class="skill-name">Node.js &amp; Express</span><span class="skill-pct">78%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="70">
-            <div class="skill-bar-header"><span class="skill-name">MongoDB &amp; SQL</span><span class="skill-pct">70%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-
-          <div class="skill-group-title" style="margin-top:2rem">Software Development</div>
-          <div class="skill-bar-wrap" data-pct="82">
-            <div class="skill-bar-header"><span class="skill-name">C++</span><span class="skill-pct">82%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="78">
-            <div class="skill-bar-header"><span class="skill-name">Java</span><span class="skill-pct">78%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="72">
-            <div class="skill-bar-header"><span class="skill-name">Kotlin (Android)</span><span class="skill-pct">72%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="75">
-            <div class="skill-bar-header"><span class="skill-name">Python</span><span class="skill-pct">75%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-        </div>
-
-        <div class="reveal-right">
-          <div class="skill-group-title">All Technologies</div>
-          <div class="tech-grid">
-            <div class="tech-pill">React.js</div>
-            <div class="tech-pill">Node.js</div>
-            <div class="tech-pill">Python</div>
-            <div class="tech-pill">C++</div>
-            <div class="tech-pill">Java</div>
-            <div class="tech-pill">Kotlin</div>
-            <div class="tech-pill">MongoDB</div>
-            <div class="tech-pill">Express.js</div>
-            <div class="tech-pill">MySQL</div>
-            <div class="tech-pill">Android Studio</div>
-            <div class="tech-pill">Git &amp; GitHub</div>
-            <div class="tech-pill">REST APIs</div>
-            <div class="tech-pill">Tailwind CSS</div>
-            <div class="tech-pill">Next.js</div>
-            <div class="tech-pill">VS Code</div>
-            <div class="tech-pill">Postman</div>
-            <div class="tech-pill">Figma</div>
-            <div class="tech-pill">Linux</div>
-            <div class="tech-pill">Docker</div>
-            <div class="tech-pill">AWS Basics</div>
-          </div>
-
-          <div class="skill-group-title" style="margin-top:2rem">Data Science</div>
-          <div class="skill-bar-wrap" data-pct="72">
-            <div class="skill-bar-header"><span class="skill-name">Pandas &amp; NumPy</span><span class="skill-pct">72%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="65">
-            <div class="skill-bar-header"><span class="skill-name">Machine Learning</span><span class="skill-pct">65%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-          <div class="skill-bar-wrap" data-pct="68">
-            <div class="skill-bar-header"><span class="skill-name">Data Visualisation</span><span class="skill-pct">68%</span></div>
-            <div class="skill-track"><div class="skill-fill"></div></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════ PROJECTS ════════ -->
-  <section id="projects">
-    <div class="container">
-      <span class="section-label reveal">// My Work</span>
-      <h2 class="section-title reveal d1">Featured Projects</h2>
-      <p class="section-desc reveal d2">10+ projects delivered — here are some highlights. Click the icons to view live demos or source code.</p>
-
-      <div class="projects-grid">
-
-        <div class="project-card reveal d1">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d2137,#1a4a6c)"></div>
-            <div class="project-thumb-icon">🌤️</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/weatherforcast" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://weatherforcast-six.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-cyan">React</span>
-              <span class="project-tag pt-cyan">Open-Meteo API</span>
-              <span class="project-tag pt-cyan">Vercel</span>
-            </div>
-            <h3>Weather Forecast</h3>
-            <p>Real-time weather app built with React and Open-Meteo API. Shows forecasts, temperature, and conditions for any location.</p>
-          </div>
-        </div>
-
-        <div class="project-card reveal d2">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a0d37,#2d1a5c)"></div>
-            <div class="project-thumb-icon">🔧</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/local-technician-finder-projest" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://local-technician-finder-project.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-purple">MongoDB</span>
-              <span class="project-tag pt-purple">Express</span>
-              <span class="project-tag pt-purple">React</span>
-              <span class="project-tag pt-purple">Node.js</span>
-            </div>
-            <h3>Local Technician Finder</h3>
-            <p>Full-stack MERN platform to discover and connect with local technicians. Features search, profiles, and booking.</p>
-          </div>
-        </div>
-
-        <div class="project-card reveal d3">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d3724,#1a5c3a)"></div>
-            <div class="project-thumb-icon">🌿</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/herbosphere" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://herbosphere.vercel.app/" target="_blank" rel="noopener" class="project-link" title="Live Demo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-green">HTML5</span>
-              <span class="project-tag pt-green">CSS3</span>
-              <span class="project-tag pt-green">JavaScript</span>
-            </div>
-            <h3>HerboSphere</h3>
-            <p>A beautifully designed herbal plant information website. Explore plant benefits, uses, and growing tips with a clean UI.</p>
-          </div>
-        </div>
-
-        <div class="project-card reveal d1">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#2a0d37,#4c1a6c)"></div>
-            <div class="project-thumb-icon">🎵</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://github.com/siddharthkrofficial/MusicPlayer" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-red">Kotlin</span>
-              <span class="project-tag pt-red">Android</span>
-              <span class="project-tag pt-red">MediaPlayer API</span>
-            </div>
-            <h3>Music Player</h3>
-            <p>Native Android music player built with Kotlin. Features playlist management, background playback, and sleek UI controls.</p>
-          </div>
-        </div>
-
-        <div class="project-card reveal d2">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a2a0d,#2f4a1a)"></div>
-            <div class="project-thumb-icon">⌨️</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://github.com/siddharthkrofficial/TypingTest" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-green">HTML5</span>
-              <span class="project-tag pt-green">CSS3</span>
-              <span class="project-tag pt-green">JavaScript</span>
-            </div>
-            <h3>Typing Test</h3>
-            <p>Interactive typing speed test app that measures WPM, accuracy, and highlights errors in real time with live stats.</p>
-          </div>
-        </div>
-
-        <div class="project-card reveal d3">
-          <div class="project-thumb">
-            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#2a1a0d,#5c3a1a)"></div>
-            <div class="project-thumb-icon">🗺️</div>
-            <div class="project-links">
-              <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" rel="noopener" class="project-link" title="GitHub Code">⌘</a>
-              <a href="https://github.com/siddharthkrofficial/CityLink-Navigator" target="_blank" rel="noopener" class="project-link" title="View Repo">↗</a>
-            </div>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag pt-yellow">C++</span>
-              <span class="project-tag pt-yellow">Graph Algorithms</span>
-              <span class="project-tag pt-yellow">DSA</span>
-            </div>
-            <h3>CityLink Navigator</h3>
-            <p>C++ console application using graph algorithms (Dijkstra/BFS) to find shortest routes between city locations.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════ CONTACT ════════ -->
-  <section id="contact">
-    <div class="container">
-      <span class="section-label reveal">// Get In Touch</span>
-      <h2 class="section-title reveal d1">Let's Work Together</h2>
-      <p class="section-desc reveal d2">Have a project in mind? I'd love to hear about it. Drop me a message!</p>
-
-      <div class="contact-grid">
-        <div class="reveal-left">
-          <div class="contact-info-list">
-            <div class="contact-info-item">
-              <div class="ci-icon">📧</div>
-              <div class="ci-text"><div class="ci-label">Email</div><div class="ci-val">siddharthkr468@email.com</div></div>
-            </div>
-            <div class="contact-info-item">
-              <div class="ci-icon">💻</div>
-              <div class="ci-text"><div class="ci-label">GitHub</div><div class="ci-val"><a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener">github.com/siddharthkrofficial</a></div></div>
-            </div>
-            <div class="contact-info-item">
-              <div class="ci-icon">🔗</div>
-              <div class="ci-text"><div class="ci-label">LinkedIn</div><div class="ci-val"><a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener">in/siddharthkrofficial</a></div></div>
-            </div>
-            <div class="contact-info-item">
-              <div class="ci-icon">𝕏</div>
-              <div class="ci-text"><div class="ci-label">X / Twitter</div><div class="ci-val"><a href="https://x.com/sidkrofficial" target="_blank" rel="noopener">@sidkrofficial</a></div></div>
-            </div>
-            <div class="contact-info-item">
-              <div class="ci-icon">💼</div>
-              <div class="ci-text"><div class="ci-label">Availability</div><div class="ci-val" style="color:var(--green)">Open to Opportunities</div></div>
-            </div>
-          </div>
-          <div class="hero-socials">
-            <a href="https://github.com/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
-            <a href="https://www.linkedin.com/in/siddharthkrofficial/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">in</a>
-            <a href="https://x.com/sidkrofficial" target="_blank" rel="noopener" class="social-btn" title="X">𝕏</a>
-            <a href="#contact" class="social-btn" title="Email">@</a>
-          </div>
-        </div>
-
-        <div class="reveal-right">
-          <form class="contact-form" id="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">YOUR NAME</label>
-                <input type="text" id="fname" placeholder="John Doe" required />
-              </div>
-              <div class="form-group">
-                <label for="femail">EMAIL ADDRESS</label>
-                <input type="email" id="femail" placeholder="john@example.com" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="fsubject">SUBJECT</label>
-              <input type="text" id="fsubject" placeholder="Project Inquiry" required />
-            </div>
-            <div class="form-group">
-              <label for="fmessage">MESSAGE</label>
-              <textarea id="fmessage" placeholder="Tell me about your project…" required></textarea>
-            </div>
-            <button type="submit" class="btn-send" id="send-btn">
-              <span id="send-text">Send Message ✦</span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════ FOOTER ════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <p>© 2026 Siddharth Kumar. Crafted with ❤️ &amp; lots of ☕ — MCA Student | 10+ Projects Built</p>
-        <div class="tech-badge"><span>HTML5</span> · <span>CSS3</span> · <span>JavaScript</span> · <span>React</span> · <span>C++</span> · <span>Kotlin</span></div>
-      </div>
-    </div>
-  </footer>
-
-  <button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-  <script src="script.js"></script>
 </body>
 </html>
